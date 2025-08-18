@@ -1,0 +1,9 @@
+[submodule "backend"]
+	path = backend
+	url = https://github.com/Pentulz/backend
+[submodule "frontend"]
+	path = frontend
+	url = https://github.com/Pentulz/frontend
+[submodule "agent"]
+	path = agent
+	url = https://github.com/Pentulz/agent

@@ -1,7 +1,7 @@
 <h1 align="center">
   <br>
   <a href="https://github.com/Pentulz/Pentulz">
-    <img src="https://github.com/Pentulz/.github/blob/main/public/media/images/logo.png?raw=true" alt="Pentulz" width="200">
+    <img src="https://github.com/Pentulz/.github/blob/main/public/images/logo.png?raw=true" alt="Pentulz" width="200">
   </a>
   <br>
 

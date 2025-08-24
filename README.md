@@ -10,7 +10,7 @@
 <h4 align="center">Orchestrate pentest tools across distributed agents. Unified results, clean UI.</h4>
 
 <p align="center">
-  <a href="LICENSE"><img src="https://img.shields.io/badge/License-MIT-blue.svg" alt="License: MIT"></a>
+  <a href="LICENSE"><img src="https://img.shields.io/badge/License-AGPL_v3-blue.svg" alt="License: AGPL v3"></a>
   <img src="https://img.shields.io/badge/Status-Alpha-ff8a3a" alt="Project status: Alpha">
   <!-- Add your CI badge when ready:
   <a href="https://github.com/Pentulz/Pentulz/actions"><img src="https://github.com/Pentulz/Pentulz/actions/workflows/ci.yml/badge.svg" alt="CI"></a>
@@ -19,9 +19,10 @@
 
 <p align="center">
   <a href="#key-features">Key Features</a> •
-  <a href="#architecture">Architecture</a> •
   <a href="#quickstart">Quickstart</a> •
-  <a href="#usage">Usage</a> •
+  <a href="#links">Links</a> •
+  <a href="#authors">Authors</a> •
+  <a href="#contributing">Contributing</a> •
   <a href="#license">License</a>
 </p>
 
@@ -33,21 +34,31 @@
 - 🧩 **Normalized results**: parse raw outputs into a unified JSON schema.
 - 🖥️ **Clear UI**: filterable tables, artifacts links, export (CSV/JSON).
 
-## Architecture
-
-- TO DO
-
 ## Quickstart
 
-- TO DO
+To start using Pentulz, you need to deploy the backend and frontend. You can do
+so by following the instructions in their respective repositories.
 
-## Usage
+- [Backend](https://github.com/Pentulz/backend)
+- [Frontend](https://github.com/Pentulz/frontend)
 
-- TO DO
+## Links
 
-## Contributors
+- [Project management](https://github.com/orgs/Pentulz/projects/1/views/1)
+- [Project report](.#links)
+- [Figma mockups](https://www.figma.com/design/nnOXhMv74qXfw7dSoTBIvS/Pentulz?node-id=0-1&t=uH9nQkD28uptY7Ez-1)
+- Repositories
+  - [Landing page](https://github.com/Pentulz/landing-page)
+  - [Frontend](https://github.com/Pentulz/frontend)
+  - [Backend](https://github.com/Pentulz/backend)
+  - [Agent](https://github.com/Pentulz/agent)
+- Deployments
+  - [Landing page](https://pentulz.xyz)
+  - [Frontend](https://pentulz.github.io/frontend/)
+  - [Backend](.#links)
 
-- TO DO
+> [!TODO]
+> Update report link and backend link
 
 ## Authors
 
@@ -55,6 +66,16 @@
 - [NATSIIRT](https://github.com/NATSIIRT)
 - [Thynkon](https://github.com/Thynkon)
 - [Vicolet](https://github.com/Vicolet)
+
+## Contributing
+
+Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
+
+1. Fork the Project
+2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the Branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
 
 ## License
 

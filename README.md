@@ -55,7 +55,7 @@ so by following the instructions in their respective repositories.
 - Deployments
   - [Landing page](https://pentulz.xyz)
   - [Frontend](https://pentulz.github.io/frontend/)
-  - [Backend](https://pentulz.up.railway.app/api/v1/health)
+  - [Backend](https://pentulz.up.railway.app/docs)
 
 ## Authors
 

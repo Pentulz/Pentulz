@@ -45,7 +45,7 @@ so by following the instructions in their respective repositories.
 ## Links
 
 - [Project management](https://github.com/orgs/Pentulz/projects/1/views/1)
-- [Project report](.#links)
+- [Project report](docs/project-documentation.pdf)
 - [Figma mockups](https://www.figma.com/design/nnOXhMv74qXfw7dSoTBIvS/Pentulz?node-id=0-1&t=uH9nQkD28uptY7Ez-1)
 - Repositories
   - [Landing page](https://github.com/Pentulz/landing-page)
@@ -55,10 +55,7 @@ so by following the instructions in their respective repositories.
 - Deployments
   - [Landing page](https://pentulz.xyz)
   - [Frontend](https://pentulz.github.io/frontend/)
-  - [Backend](.#links)
-
-> [!TODO]
-> Update report link and backend link
+  - [Backend](https://pentulz.up.railway.app/api/v1/health)
 
 ## Authors
 

@@ -26,24 +26,27 @@
   <a href="#license">License</a>
 </p>
 
+>[!NOTE]
+> The desription of the problem, the solution, process used relative to the course PDG of HEIG-VD is in the [docs/project-documentation.pdf](docs/PDG_CDC_GROUP_23.pdf) file.
+
 ---
 
-## Key Features
 
-- 🔧 **Tool orchestration**: run pentest tools (e.g., `nmap`) across distributed agents.
-- 🧩 **Normalized results**: parse raw outputs into a unified JSON schema.
-- 🖥️ **Clear UI**: filterable tables, artifacts links, export (CSV/JSON).
+## Key Features
+- **Distributed Tool Orchestration**: Deploy and manage agents across VLANs, cloud VPCs, and on-premises environments to run pentest tools locally within target networks.
+- **Unified Result Schema**: Automatically normalize outputs from diverse tools (nmap, gobuster, ffuf, etc.) into a consistent JSON format for streamlined analysis.
+- **Centralized Management**: Monitor scan execution, agent status, and collect findings through a secure, scalable backend with PostgreSQL persistence.
+- **Intuitive Web Interface**: Explore results through filterable tables, search functionality, and export capabilities (JSON/CSV) with responsive design.
+- **Modular Tool Integration**: Add new security tools with just 2 Python files - no architectural changes required.
+- **Secure Communication**: All agent-backend communications encrypted via TLS 1.2+ with token-based authentication.
+- **Multi-Platform Agents**: Support for Linux x86_64, Windows 64-bit, and containerized deployments (Docker).
+
 
 ## Quickstart
 
 To start using Pentulz, you need to deploy the backend and frontend. You can do
-so by following the instructions in their respective repositories or deploy with
-docker compose.
+so by following the instructions : 
 
-- [Backend](https://github.com/Pentulz/backend)
-- [Frontend](https://github.com/Pentulz/frontend)
-
-### Docker compose instructions
 
 Clone this repo or copy [`compose.yaml`](./compose.yaml)
 
@@ -68,6 +71,11 @@ agents should be able to reach the API by manually providing your host's IP.
 
 - [Frontend](http://localhost)
 - [Backend](http://localhost:8000)
+
+>[!NOTE]
+> The deployment in development mode is documented in their respective repositories : 
+> - [Backend](https://github.com/Pentulz/backend)
+> - [Frontend](https://github.com/Pentulz/frontend)
 
 ## Links
 
@@ -95,11 +103,17 @@ agents should be able to reach the API by manually providing your host's IP.
 
 Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
 
-1. Fork the Project
+1. Fork the repository you want to contribute to (backend, frontend, agent)
 2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
 3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
 4. Push to the Branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
+
+>[!NOTE]
+> Each repository has its documentation. The contribution workflow is the same for all repositories.
+> We will verify that the contribution is relevant to the project and that the code is of good quality.
+
+
 
 ## License
 

@@ -1,0 +1,64 @@
+services:
+  database:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_DB: ${DB_NAME:-pentulz}
+      POSTGRES_USER: ${DB_USER:-postgres}
+      POSTGRES_PASSWORD: ${DB_PASSWORD:-postgres}
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres -d postgres"]
+      interval: 5s
+      timeout: 3s
+      retries: 5
+    networks:
+      - backend
+
+  api:
+    image: ghcr.io/pentulz/backend:latest
+    environment:
+      APP_NAME: "${APP_NAME:-Pentulz Backend}"
+      APP_ENVIRONMENT: "prod"
+      APP_DEBUG: false
+      APP_CORS_ALLOW_ORIGINS: '${APP_CORS_ALLOW_ORIGINS:-["http://localhost", "https://pentulz.github.io"]}'
+      APP_DATABASE_HOST: database
+      APP_DATABASE_PORT: 5432
+      APP_DATABASE_USER: ${DB_USER:-postgres}
+      APP_DATABASE_PASSWORD: ${DB_PASSWORD:-postgres}
+      APP_DATABASE_NAME: ${DB_NAME:-pentulz}
+    ports:
+      - "8000:8000"
+    depends_on:
+      database:
+        condition: service_healthy
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/api/v1/health"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+    command: >
+      sh -c "
+        echo 'Running database migrations...' &&
+        alembic upgrade head &&
+        echo 'Starting production server...' &&
+        uvicorn app.main:app --host 0.0.0.0 --port 8000 --workers 4
+      "
+    networks:
+      - backend
+
+  frontend:
+    image: ghcr.io/pentulz/frontend:latest
+    environment:
+      NUXT_PUBLIC_API_BASE: "${PUBLIC_API_BASE:-http://localhost:8000}"
+    ports:
+      - "80:80"
+    networks:
+      - frontend
+
+volumes:
+  postgres_data:
+networks:
+  backend:
+  frontend:

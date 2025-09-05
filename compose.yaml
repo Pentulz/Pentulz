@@ -28,7 +28,7 @@ services:
       APP_DATABASE_PASSWORD: ${DB_PASSWORD:-postgres}
       APP_DATABASE_NAME: ${DB_NAME:-pentulz}
     ports:
-      - "8000:8000"
+      - "0.0.0.0:8000:8000"
     depends_on:
       database:
         condition: service_healthy
@@ -53,7 +53,7 @@ services:
     environment:
       NUXT_PUBLIC_API_BASE: "${PUBLIC_API_BASE:-http://localhost:8000}"
     ports:
-      - "80:80"
+      - "0.0.0.0:80:80"
     networks:
       - frontend
 

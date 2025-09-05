@@ -37,10 +37,37 @@
 ## Quickstart
 
 To start using Pentulz, you need to deploy the backend and frontend. You can do
-so by following the instructions in their respective repositories.
+so by following the instructions in their respective repositories or deploy with
+docker compose.
 
 - [Backend](https://github.com/Pentulz/backend)
 - [Frontend](https://github.com/Pentulz/frontend)
+
+### Docker compose instructions
+
+Clone this repo or copy [`compose.yaml`](./compose.yaml)
+
+```sh
+docker compose up -d
+```
+
+You can configure part of the `compose.yaml` using the following variables or
+directly modify the file for your use case.
+
+- `APP_CORS_ALLOW_ORIGINS`: Specify which origins are allowed to interact with
+  the api. This should match the base URL you plan to use when accessing the
+  frontend. (e.g. \["https://pentulz.github.io"\] when deploying to github pages)
+- `PUBLIC_API_BASE`: Specify the base url to access the API. (e.g.
+  https://api.pentulz.xyz)
+- `APP_NAME`: The name of the backend service. This is visible when accessing
+  the root of the API or its doc. (e.g. "Pentulz Backend")
+
+When using the default values with compose, the frontend and backend will listen
+on any interface. The frontend will only work with localhost due to CORS but
+agents should be able to reach the API by manually providing your host's IP.
+
+- [Frontend](http://localhost)
+- [Backend](http://localhost:8000)
 
 ## Links
 

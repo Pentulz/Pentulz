@@ -26,6 +26,9 @@
   <a href="#license">License</a>
 </p>
 
+>[!NOTE]
+> The desription of the problem, the solution, process used relative to the course PDG of HEIG-VD is in the [docs/project-documentation.pdf](docs/project-documentation.pdf) file.
+
 ---
 
 
